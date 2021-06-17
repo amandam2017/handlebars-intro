@@ -110,12 +110,13 @@ function resetTemplateStorage() {
 
 //RESETTING FORM FIELDS
 function clearBtn() {
-	document.getElementById('registrationNumberForm').reset();
+	document.getElementById('regTemplateForm').reset();
 }
 
+//SHOW STORAGE ON WHEN PAGE IS REFRESHED
 window.onload = allStorageRegs();
 
 btnAddElem.addEventListener('click', regDisplay);
 btnShowElem.addEventListener('click', viewByTownTemp);
 btnShowAllElem.addEventListener('click', allStorageRegs);
-// btnResetElem.addEventListener('click', resetTemplateStorage);
+btnResetElem.addEventListener('click', resetTemplateStorage);

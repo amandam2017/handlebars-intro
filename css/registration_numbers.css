@@ -76,7 +76,7 @@ span{
   }
 
   /******style the form*****/
-  #registrationNumberForm{
+  #registrationNumberForm, #regTemplateForm{
       margin: auto;
       border: 5px solid;
       padding: 15px;

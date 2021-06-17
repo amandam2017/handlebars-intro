@@ -61,24 +61,8 @@ function viewSelectedTownTemp(townChecked) {
 
 }
 
-// function showAllTemp(){
-// 	var allRegsStored = [];
-
-// 	// while (printRegNumElem.firstChild) {
-//     //     printRegNumElem.removeChild(printRegNumElem.firstChild);
-//     // }
-
-// 	for(let i = 0; i < storageReigstrations.length; i++) {
-// 	var allRegs = storageReigstrations[i];
-// 	if(allRegs){
-// 		allRegsStored.push(allRegs);
-// 	}
-// 	return allRegsStored;
-// }
-// }
-
-function listErrors(storageReigstrations){
-	if(!storageReigstrations){
+function showErrors(townChecked){
+	if(townChecked === ''){
 		return 'the storage is empty'
 	}
 
@@ -88,7 +72,7 @@ function listErrors(storageReigstrations){
 		setReg,
 		getReg,
 		addBtnErrors,
-		listErrors,
+		showErrors,
 		set,
 		viewSelectedTownTemp,
 		// showAllTemp
