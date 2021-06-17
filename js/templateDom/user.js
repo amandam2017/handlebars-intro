@@ -80,7 +80,8 @@ function regDisplay() {
 
 //DISPLAYING REGISTRATIONS FROM A TOWN
 
-function viewByTownTemp(){
+function viewByTownTemp(storageListOnTemp){
+	console.log(storageListOnTemp)
 	var checkedButtonTemp = document.querySelector("input[name ='townTemp']:checked");
 	if(checkedButtonTemp) {
 		checkedTownTemp = checkedButtonTemp.value
@@ -96,7 +97,10 @@ function viewByTownTemp(){
 	}
 
 	
-	
+	setTimeout(function() {
+		errorsElem.innerHTML = ""
+		successfulElem.innerHTML = ""
+	}, 4000)
 	clearBtn();
 	
 }
@@ -106,6 +110,7 @@ function allStorageRegs(displayAllRegOnStorage){
 	var allRegsNumbers = registrationsTemp.getReg();
 	// console.log(allRegsNumbers)
 	if(allRegsNumbers !== ''){
+		console.log(allRegsNumbers)
 		regOutputElem.innerHTML = userTemplate({eachRegNo: allRegsNumbers});
 	}else{
 		return 'there is no registrations on storage'

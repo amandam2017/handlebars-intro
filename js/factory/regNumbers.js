@@ -70,7 +70,7 @@ function showErrors(townChecked){
 
 function showErrorsDisplayAll(townChecked){
 	if(townChecked === '' || townChecked === undefined){
-		return 'please select a town'
+		return 'no added registrations'
 	}
 
 }
