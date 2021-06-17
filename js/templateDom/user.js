@@ -80,8 +80,6 @@ function regDisplay() {
 
 //DISPLAYING REGISTRATIONS FROM A TOWN
 
-// var checkedTownTemp = ''
-
 function viewByTownTemp(){
 	var checkedButtonTemp = document.querySelector("input[name ='townTemp']:checked");
 	if(checkedButtonTemp) {
@@ -97,8 +95,10 @@ function viewByTownTemp(){
 }
 
 //SHOW REG FROM STORAGE
-function allStorageReg(){
-
+function allStorageRegs(){
+	var allRegsNumbers = registrationsTemp.getReg();
+	console.log(allRegsNumbers)
+	regOutputElem.innerHTML = userTemplate({eachRegNo: allRegsNumbers});	
 }
 
 //CLEARING TEMPLATE STORAGE
@@ -113,9 +113,9 @@ function clearBtn() {
 	document.getElementById('registrationNumberForm').reset();
 }
 
-// window.onload = showAllStorageTemp();
+window.onload = allStorageRegs();
 
 btnAddElem.addEventListener('click', regDisplay);
 btnShowElem.addEventListener('click', viewByTownTemp);
-btnShowAllElem.addEventListener('click', allStorageReg);
+btnShowAllElem.addEventListener('click', allStorageRegs);
 // btnResetElem.addEventListener('click', resetTemplateStorage);

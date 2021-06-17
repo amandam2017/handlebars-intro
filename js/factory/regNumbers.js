@@ -57,42 +57,32 @@ function viewSelectedTownTemp(townChecked) {
 			}
 		
 	}
-	return selectedTwnListTemp
+	return selectedTwnListTemp;
 
-	// for(let i = 0; i < selectedTwnListTemp.length; i++) {
-	// 	const elementForTown = selectedTwnListTemp[i];
-	// 	console.log('what is in here:',selectedTwnListTemp[i])
-
-	// 	eachTownOutputElem.innerHTML = userTemplate({townRegNo: elementForTown});	
-	// }
-
-
-    // checkedButtonTemp.value = false;
 }
-// var townsOnStorageTemplate = registrationsTemp.getReg();
 
-// function showAllStorageTemp(){
-// 	regOutputElem.innerHTML = '';
-// 	var townsOnStorageTemplate = JSON.parse(localStorage.getItem('regListTemplate'));
+// function showAllTemp(){
+// 	var allRegsStored = [];
 
 // 	// while (printRegNumElem.firstChild) {
 //     //     printRegNumElem.removeChild(printRegNumElem.firstChild);
 //     // }
 
-// 	for(let i = 0; i < townsOnStorageTemplate.length; i++) {
-// 	const element = townsOnStorageTemplate[i];
-// 	// console.log(element)
-// 	regOutputElem.innerHTML= userTemplate({allRegNo:element});
-
+// 	for(let i = 0; i < storageReigstrations.length; i++) {
+// 	var allRegs = storageReigstrations[i];
+// 	if(allRegs){
+// 		allRegsStored.push(allRegs);
+// 	}
+// 	return allRegsStored;
 // }
 // }
 
-	function listErrors(storageReigstrations){
-		if(!storageReigstrations){
-			return 'there is no registration'
-		}
-
+function listErrors(storageReigstrations){
+	if(!storageReigstrations){
+		return 'the storage is empty'
 	}
+
+}
 
 	return {
 		setReg,
@@ -101,6 +91,6 @@ function viewSelectedTownTemp(townChecked) {
 		listErrors,
 		set,
 		viewSelectedTownTemp,
-		// showAllStorageTemp
+		// showAllTemp
 	}
 }
