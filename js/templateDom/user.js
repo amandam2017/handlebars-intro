@@ -85,20 +85,29 @@ function viewByTownTemp(){
 	if(checkedButtonTemp) {
 		checkedTownTemp = checkedButtonTemp.value
 		console.log('checking',checkedTownTemp)
+
+		var towns = registrationsTemp.viewSelectedTownTemp(checkedTownTemp);
+		regOutputElem.innerHTML = userTemplate({eachRegNo: towns});	
+	}else{
+		errorsElem.innerHTML = registrationsTemp.showErrors(checkedButtonTemp);
+
 	}
 
-	var towns = registrationsTemp.viewSelectedTownTemp(checkedTownTemp);
-		regOutputElem.innerHTML = userTemplate({eachRegNo: towns});	
+	
 	
 	clearBtn();
 	
 }
 
 //SHOW REG FROM STORAGE
-function allStorageRegs(){
+function allStorageRegs(displayAllRegOnStorage){
 	var allRegsNumbers = registrationsTemp.getReg();
-	console.log(allRegsNumbers)
-	regOutputElem.innerHTML = userTemplate({eachRegNo: allRegsNumbers});	
+	// console.log(allRegsNumbers)
+	if(allRegsNumbers !== ''){
+		regOutputElem.innerHTML = userTemplate({eachRegNo: allRegsNumbers});
+	}else{
+		return 'there is no registrations on storage'
+	}	
 }
 
 //CLEARING TEMPLATE STORAGE

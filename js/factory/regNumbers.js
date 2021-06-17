@@ -62,8 +62,15 @@ function viewSelectedTownTemp(townChecked) {
 }
 
 function showErrors(townChecked){
-	if(townChecked === ''){
-		return 'the storage is empty'
+	if(townChecked === '' || townChecked === undefined){
+		return 'please select a town'
+	}
+
+}
+
+function showErrorsDisplayAll(townChecked){
+	if(townChecked === '' || townChecked === undefined){
+		return 'please select a town'
 	}
 
 }
@@ -75,6 +82,7 @@ function showErrors(townChecked){
 		showErrors,
 		set,
 		viewSelectedTownTemp,
+		showErrorsDisplayAll
 		// showAllTemp
 	}
 }
