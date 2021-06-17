@@ -88,8 +88,10 @@ function viewByTownTemp(){
 
 		var towns = registrationsTemp.viewSelectedTownTemp(checkedTownTemp);
 		regOutputElem.innerHTML = userTemplate({eachRegNo: towns});	
+		errorsElem.innerHTML = ''
 	}else{
-		errorsElem.innerHTML = registrationsTemp.showErrors(checkedButtonTemp);
+		errorsElem.innerHTML = registrationsTemp.showErrors();
+		regOutputElem.innerHTML = ''
 
 	}
 
