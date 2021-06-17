@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/registration_numbers.css">
+    <title>registration numbers</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+
+    <script type="text/x-template" class="userTemplate">
+        <ul>
+            {{#each eachRegNo}}
+                <li>{{this}}</li>
+            {{/each}}
+            </ul> 
+            
+            <ul>
+                {{#each townRegNo}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="inner_container">
+            <div class="row">
+                <div class="box shadow">
+                    <h3>Registration Number:</h3>
+
+                    <span class="regNotEntered"></span>
+                    <span class="regAlreadyExist"></span>
+                    <span class="unMatchPattern"></span>
+                    <span class="storageResert"></span>
+                    <span class="successfulMessage successfulColor"></span>
+
+                    <form id="registrationNumberForm" class="clearfix">
+                        <span class="errorMessageOutput"></span>
+                        <input class="enteredReg" name="enteredReg" type="text" placeholder="CA 245852" value=""
+                            required />
+                        <button class="addBtn" name="add" type="button">ADD</button>
+                        
+                        <button class="buttonReset" name="removeStorage" type="button">RESET</button>
+
+                        <div class="row clearfix">
+                            <h3>Filter by a town</h3>
+                            <div class="row townName">
+                                <label>Cape Town</label>
+                                <input type="radio" name="town" class="selectTown" value="CA">
+                            </div>
+                            <div class="row townName">
+                                <label>Malmesbury</label>
+                                <input type="radio" name="town" class="selectTown" value="CK">
+                            </div>
+                            <div class="row townName">
+                                <label>Stellenbosch</label>
+                                <input type="radio" name="town" class="selectTown" value="CL">
+                            </div>
+                            <div class="row">
+                                <button class="buttonShow" name="show" type="button">Show By Town</button>
+                                <button class="buttonShowAll" name="show-all" type="button">SHOW ALL</button>
+                                <ul id="selectedTownReg" class="clearfix printEachTown"></ul>
+                            </div>
+                            <ul class="printRegNumber">   
+                            </ul>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="inner_container">
+            <div class="row">
+                <div class="box shadow">
+                    <h3>Registration No Template:</h3>
+
+                    <span class="storageClear"></span>
+                    <span class="successful successfulColor"></span>
+
+                    <form id="registrationNumberForm" class="clearfix">
+                        <span class="errors"></span>
+                        <input class="enteredRegTemp" name="enteredRegTemp" type="text" placeholder="CA 245852" value=""
+                            required />
+                        <button class="btnAdd" name="add" type="button">ADD</button>
+                        
+                        <button class="btnReset" name="removeStorage" type="button">RESET</button>
+
+                        <div class="row clearfix">
+                            <h3>Filter by a town</h3>
+                            <div class="row townName">
+                                <label>Cape Town</label>
+                                <input type="radio" name="town" class="selectTown" value="CA">
+                            </div>
+                            <div class="row townName">
+                                <label>Malmesbury</label>
+                                <input type="radio" name="town" class="selectTown" value="CK">
+                            </div>
+                            <div class="row townName">
+                                <label>Stellenbosch</label>
+                                <input type="radio" name="town" class="selectTown" value="CL">
+                            </div>
+                            <div class="row">
+                                <button class="btnShow" name="show" type="button">Show By Town</button>
+                                <button class="btnShowAll" name="show-all" type="button">SHOW ALL</button>
+                                <ul id="selectedTownReg" class="clearfix print"></ul>
+                            </div>
+                            <div class="regOutput">   
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/factory/regNumbers.js" charset="utf-8"></script>
+    <script src="js/templateDom/user.js"></script>
+
+    <script src="js/dom/regNumbers.js" charset="utf-8"></script>
+
+</body>
+
+</html>
