@@ -98,14 +98,11 @@ function viewSelectedTown() {
 
 	for(let i = 0; i < selectedTwnList.length; i++) {
 		const element = selectedTwnList[i];
-		//  console.log(selectedTwnList[i])
 		var regLi = document.createElement('Li');
 		regLi.innerHTML = element;
-		//  const newContent = document.createTextNode(element);
 		printRegNumElem.appendChild(regLi);
 	}
 	clearInput();
-    // checkedButton.value = false;
 }
 var listReg = registrations.getReg();
 

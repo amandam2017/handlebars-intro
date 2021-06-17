@@ -20,6 +20,7 @@ form .enteredReg, form .enteredRegTemp{
 
 .inner_container{
     margin: 50px 25px;
+    width:50%;
 }
 
 .successfulColor{

@@ -45,6 +45,48 @@ function regNum(storageReigstrations) {
 		}
 	}
 
+
+function viewSelectedTownTemp(townChecked) {
+
+	var selectedTwnListTemp = [];
+	for(var i = 0; i < storageReigstrations.length; i++) {
+		var eachTownOnTemp = storageReigstrations[i]
+
+			if(eachTownOnTemp.startsWith(townChecked)) {
+				selectedTwnListTemp.push(eachTownOnTemp)
+			}
+		
+	}
+	return selectedTwnListTemp
+
+	// for(let i = 0; i < selectedTwnListTemp.length; i++) {
+	// 	const elementForTown = selectedTwnListTemp[i];
+	// 	console.log('what is in here:',selectedTwnListTemp[i])
+
+	// 	eachTownOutputElem.innerHTML = userTemplate({townRegNo: elementForTown});	
+	// }
+
+
+    // checkedButtonTemp.value = false;
+}
+// var townsOnStorageTemplate = registrationsTemp.getReg();
+
+// function showAllStorageTemp(){
+// 	regOutputElem.innerHTML = '';
+// 	var townsOnStorageTemplate = JSON.parse(localStorage.getItem('regListTemplate'));
+
+// 	// while (printRegNumElem.firstChild) {
+//     //     printRegNumElem.removeChild(printRegNumElem.firstChild);
+//     // }
+
+// 	for(let i = 0; i < townsOnStorageTemplate.length; i++) {
+// 	const element = townsOnStorageTemplate[i];
+// 	// console.log(element)
+// 	regOutputElem.innerHTML= userTemplate({allRegNo:element});
+
+// }
+// }
+
 	function listErrors(storageReigstrations){
 		if(!storageReigstrations){
 			return 'there is no registration'
@@ -58,5 +100,7 @@ function regNum(storageReigstrations) {
 		addBtnErrors,
 		listErrors,
 		set,
+		viewSelectedTownTemp,
+		// showAllStorageTemp
 	}
 }

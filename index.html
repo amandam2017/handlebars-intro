@@ -15,13 +15,8 @@
             {{#each eachRegNo}}
                 <li>{{this}}</li>
             {{/each}}
-            </ul> 
             
-            <ul>
-                {{#each townRegNo}}
-                    <li>{{this}}</li>
-                {{/each}}
-            </ul>
+            </ul>  
     </script>
 </head>
 <body>
@@ -94,15 +89,15 @@
                             <h3>Filter by a town</h3>
                             <div class="row townName">
                                 <label>Cape Town</label>
-                                <input type="radio" name="town" class="selectTown" value="CA">
+                                <input type="radio" name="townTemp" class="selectTown" value="CA">
                             </div>
                             <div class="row townName">
                                 <label>Malmesbury</label>
-                                <input type="radio" name="town" class="selectTown" value="CK">
+                                <input type="radio" name="townTemp" class="selectTown" value="CK">
                             </div>
                             <div class="row townName">
                                 <label>Stellenbosch</label>
-                                <input type="radio" name="town" class="selectTown" value="CL">
+                                <input type="radio" name="townTemp" class="selectTown" value="CL">
                             </div>
                             <div class="row">
                                 <button class="btnShow" name="show" type="button">Show By Town</button>
